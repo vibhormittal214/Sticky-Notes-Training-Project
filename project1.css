@@ -1,0 +1,95 @@
+body {
+  background-color: rgb(128, 0,128);
+  margin: 0;
+  padding: 0;
+}
+#stickyNotes{
+	list-style-type: none;
+	display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  padding: 4px;
+
+}
+header {
+ border-bottom: 4px solid pink;   
+ text-align: right;
+ animation-name: opacity1;
+ animation-duration:1s;
+ animation-timing-function:linear;
+ animation-iteration-count: infinite;
+
+}
+@keyframes opacity1{
+	o%{opacity: .75;}
+	50%{opacity: 1;
+	}
+	100%{opacity: .75;}
+}
+header h1 {
+  font-family: 'Times New Roman', Times New Roman, monospace;
+  color: white;
+}
+
+#addNewNote {
+  float: right;
+  padding: 4px;
+  margin: 10px;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times New Roman, monospace;
+  color: white;
+  border-radius: 15px;
+  font-weight: bold;
+  width: 100px;
+  background-color: blue;
+  border: 1px solid #4285f4;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#addNewNote:hover {
+  transform: scale(1.05);
+}
+
+#addNewNote:active {
+  background-color: #155ac8;
+}
+
+#stickyNotes li{
+	padding: 4px;
+	display: inline;
+	cursor: default;
+}
+#stickyNotes li div{
+  position: relative;
+  width: 246px;
+  height: 246px;
+}
+
+#stickyNotes li div input.text1{
+	
+  border: 0px solid;
+  position: absolute;
+  width: 180px;
+  height: 70px;
+  top: 113px;
+  padding: 5px;
+  left: 22px;
+  overflow: scroll;
+}
+#stickyNotes li div:hover{
+	transform: scale(1.05);
+}
+
+#stickyNotes li div img.imgdel1{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 10px;
+}
+
+#stickyNotes li div img.imgdel1:hover{
+  transform: scale(1.8);  
+}
